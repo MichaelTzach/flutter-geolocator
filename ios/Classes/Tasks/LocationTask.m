@@ -29,6 +29,7 @@
     if (_locationManager == nil) {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
+        _locationManager.allowsBackgroundLocationUpdates = YES;
     }
     
     CLLocationAccuracy accuracy = [self clValue:_locationOptions.accuracy];
